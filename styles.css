@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    height: 15vh;
+    background-color: #333;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    width: 30%;
+    font-family: 'Zen Dots', cursive;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.add-delete-container {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+}
+
+.add-btn, .delete-btn {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.icon {
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.filter-container {
+    height: 15vh;
+    width: 20rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.filter-btn {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.blue-filter {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.pink-filter {
+    background-color: pink;
+    cursor: pointer;
+}
+
+.yellow-filter {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.green-filter {
+    background-color: green;
+    cursor: pointer;
+}
+
+.ticket-container {
+    min-height: 70vh;
+    padding: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.tick-mark {
+    font-size: 2rem;
+    color: white;
+}
+
+.filter-btn.active {
+    opacity: 0.5;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    animation: makeOpaque 0.3s;
+}
+
+@keyframes makeOpaque {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal {
+    background-color: white;
+    height: 40%;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.actual-modal {
+    
+}
+
+.input-task-area {
+    padding: 2%;
+    height: 90%;
+    width: 70%;
+}
+
+.priority-option {
+    padding: 2%;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.priority-btn {
+    height: 20%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.blue-btn {
+    background-color: blue;
+}
+.pink-btn {
+    background-color: pink;
+}
+.yellow-btn {
+    background-color: yellow;
+}
+.green-btn {
+    background-color: green;
+}
+
+.input-task {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 2%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans', sans-serif;
+    color: gray;
+    overflow-y: scroll;
+}
+
+.priority-btn.active {
+    border: 5px solid black;
+}
+
+.actual-ticket {
+    height: 20vh;
+    width: 30vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 2%;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans', sans-serif;
+    overflow-y: scroll;
+    text-align: left;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.actual-ticket.pink {
+    border: 5px solid pink;
+}
+
+.actual-ticket.blue {
+    border: 5px solid blue;
+}
+
+.actual-ticket.green {
+    border: 5px solid green;
+}
+
+.actual-ticket.yellow {
+    border: 5px solid yellow;
+}
+
+
+
+.actual-ticket.active {
+    border: 5px solid black;
+}
+
+.close-btn {
+    float: right;
+    color: black;
+}
+
+.delete-btn {
+    color: black;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 0px;
+}
