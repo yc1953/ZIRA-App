@@ -35,7 +35,8 @@ let colors = [1, 1, 1, 1];
 function changeFilters(i) {
     colors[i] = 1 - colors[i];
     ticketContainer.innerHTML = '';
-    prevTasks = localStorage.getItem('allTasks')
+    prevTasks = localStorage.getItem('allTasks');
+    if(prevTasks!=null){
     prevTasks = JSON.parse(prevTasks);
     for (let i = 0; i < prevTasks.length; i++) {
         if (colors[idx(prevTasks[i].color)] == 1) {
@@ -50,6 +51,7 @@ function changeFilters(i) {
         }
     }
     addingListenersToTickets();
+    }
 }
 
 for (let i = 0; i < filterBtn.length; i++) {
